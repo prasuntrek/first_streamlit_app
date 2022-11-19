@@ -1,3 +1,4 @@
 import streamlit
 streamlit.title("Prasun New Data App for Dining")
-streamlit.text("Breakfast Menu")
+streamlit.header("Breakfast Menu")
+streamlit.text("Oatmeal and Egg")
