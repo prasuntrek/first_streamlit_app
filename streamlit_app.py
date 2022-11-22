@@ -52,6 +52,9 @@ except URLError as e:
 # Adding snowflake connector code
 #import snowflake.connector
 
+# New Section to Allow user to write a new Fruit Name 
+add_my_fruit = streamlit.text_input('What Fruit would you like to add?')
+streamlit.write('Thanks for adding:  ', add_my_fruit)
 
 streamlit.header("The fruit load list contains:")
 #Snowflake-related functions
@@ -66,12 +69,6 @@ if streamlit.button('Get Fruit Load List'):
   my_data_rows = get_fruit_load_list()
   streamlit.dataframe(my_data_rows)
 
-
-
-
-# New Section to Allow user to write a new Fruit Name 
-add_my_fruit = streamlit.text_input('What Fruit would you like to add?')
-streamlit.write('Thanks for adding:  ', add_my_fruit)
 
 my_cur2 = my_cnx.cursor()
 my_cur2.execute("insert into fruit_load_list values ('from streamlit')")
