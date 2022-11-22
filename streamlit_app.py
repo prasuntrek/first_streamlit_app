@@ -47,7 +47,7 @@ except URLError as e:
 
 
 #Stop any code to run from this point
-streamlit.stop()
+#streamlit.stop()
 
 # Adding snowflake connector code
 #import snowflake.connector
