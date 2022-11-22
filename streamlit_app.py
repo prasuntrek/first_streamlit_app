@@ -2,6 +2,7 @@ import streamlit
 import pandas
 import requests
 import snowflake.connector
+from urllib.error import URLError
 
 
 streamlit.title("Prasun New Data App for Dining")
@@ -39,6 +40,9 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
 streamlit.dataframe(fruityvice_normalized)
 
+
+#Stop any code to run from this point
+streamlit.stop()
 
 # Adding snowflake connector code
 #import snowflake.connector
